@@ -14,13 +14,13 @@ export const useProductStore = defineStore("ProductStore", {
     },
     filterByCategory(category: string){
       // Filters products by category
-      this.products = this.products.filter(product =>
+      return this.products.filter(product =>
         product.data.category === category
       );
     },
     filterByRating(minRating: number){
       // Filters products with ratings above minRating
-      this.products = this.products.filter(product =>
+      return this.products.filter(product =>
         product.data.rating > minRating
       );
     }
